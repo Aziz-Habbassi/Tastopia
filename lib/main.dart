@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tastopia/feautures/home/presentation/views/welcome_view.dart';
+import 'package:tastopia/core/utils/app_routes.dart';
 
 void main() {
   runApp(const Tastopia());
@@ -10,6 +10,6 @@ class Tastopia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: WelcomeView());
+    return MaterialApp.router(routerConfig: AppRoutes.router);
   }
 }
