@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 import 'package:tastopia/feautures/welcome/presentation/widgets/background_video_player.dart';
 
@@ -10,22 +11,30 @@ class WelcomeView extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(),
+          BackgroundVideoPlayer(),
           Container(
             margin: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.85,
+              top: MediaQuery.of(context).size.height * 0.9,
               left: 25,
               right: 25,
-              bottom: 10,
+              bottom: 20,
             ),
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
-
+            padding: EdgeInsets.symmetric(horizontal: 2),
             decoration: BoxDecoration(
-              color: const Color.fromARGB(103, 158, 158, 158),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color.fromARGB(255, 3, 255, 12),
+                  spreadRadius: 5,
+                  blurRadius: 50,
+                ),
+              ],
               borderRadius: BorderRadius.circular(12),
             ),
             child: SlideAction(
-              onSubmit: () {},
+              onSubmit: () {
+                context.go("/HomeView");
+                return null;
+              },
               text: "Go To Home",
               outerColor: const Color.fromARGB(255, 3, 255, 12),
             ),

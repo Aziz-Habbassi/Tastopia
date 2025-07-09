@@ -22,6 +22,12 @@ class _BackgroundVideoPlayerState extends State<BackgroundVideoPlayer> {
   }
 
   @override
+  void dispose() {
+    _videoPlayerController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return VideoPlayer(_videoPlayerController);
   }

@@ -10,6 +10,9 @@ class Tastopia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(routerConfig: AppRoutes.router);
+    return MaterialApp.router(
+      routerConfig: AppRoutes.router,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
