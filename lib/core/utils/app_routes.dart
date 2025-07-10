@@ -11,14 +11,12 @@ abstract class AppRoutes {
         builder: (BuildContext context, GoRouterState state) {
           return const WelcomeView();
         },
-        routes: <RouteBase>[
-          GoRoute(
-            path: '/HomeView',
-            builder: (BuildContext context, GoRouterState state) {
-              return const HomeView();
-            },
-          ),
-        ],
+      ),
+      GoRoute(
+        path: '/HomeView',
+        builder: (BuildContext context, GoRouterState state) {
+          return const HomeView();
+        },
       ),
     ],
   );
