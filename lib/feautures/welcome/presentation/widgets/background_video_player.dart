@@ -15,9 +15,13 @@ class _BackgroundVideoPlayerState extends State<BackgroundVideoPlayer> {
     _videoPlayerController = VideoPlayerController.asset(
       "assets/videos/home_video.mp4",
     );
-    _videoPlayerController.initialize().then((_) => setState(() {}));
-    _videoPlayerController.play();
-    _videoPlayerController.setLooping(true);
+    _videoPlayerController.initialize().then((_) {
+      _videoPlayerController.setVolume(0);
+      _videoPlayerController.play();
+      _videoPlayerController.setLooping(true);
+      setState(() {});
+    });
+
     super.initState();
   }
 
