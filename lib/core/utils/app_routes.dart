@@ -7,13 +7,13 @@ abstract class AppRoutes {
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
-        path: '/ss',
+        path: '/',
         builder: (BuildContext context, GoRouterState state) {
           return const WelcomeView();
         },
       ),
       GoRoute(
-        path: '/',
+        path: '/HomeView',
         builder: (BuildContext context, GoRouterState state) {
           return const HomeView();
         },
