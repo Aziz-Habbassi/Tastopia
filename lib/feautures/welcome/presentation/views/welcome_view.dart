@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:tastopia/feautures/welcome/presentation/widgets/background_video_player.dart';
+import 'package:tastopia/feautures/welcome/presentation/widgets/custom_button.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});
@@ -12,40 +12,30 @@ class WelcomeView extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           BackgroundVideoPlayer(videoUrl: "assets/videos/home_video.mp4"),
-          Positioned(
-            bottom: 200,
-            child: GestureDetector(
-              onTap: () {
-                context.go("/HomeView");
-              },
-              child: Container(
-                alignment: Alignment.center,
-                height: 80,
-                width: 300,
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                padding: EdgeInsets.symmetric(horizontal: 2),
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 8, 241, 0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color.fromARGB(255, 0, 179, 6),
-                      spreadRadius: 20,
-                      blurRadius: 25,
-                    ),
-                  ],
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Text(
-                  "Start Cooking",
-                  style: TextStyle(
-                    fontFamily: "Poppins",
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Welcome To",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 62,
+                  fontFamily: "GT-Sectra",
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-            ),
+              Text(
+                "Tastopia",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 42,
+                  fontFamily: "Poppins",
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              SizedBox(height: 50),
+              CustomButton(),
+            ],
           ),
         ],
       ),
