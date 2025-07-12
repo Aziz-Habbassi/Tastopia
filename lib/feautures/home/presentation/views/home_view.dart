@@ -1,28 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rive/rive.dart' hide Image;
 import 'package:slide_to_act/slide_to_act.dart';
 import 'package:tastopia/feautures/welcome/presentation/widgets/background_video_player.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
-  SMIBool? smiTrigger;
-  void _onRiveInit(Artboard artboard) {
-    final StateMachineController? controller =
-        StateMachineController.fromArtboard(artboard, "State Machine 1");
-    if (controller != null) {
-      artboard.addController(controller);
-      smiTrigger = controller.findInput<bool>('hover') as SMIBool?;
-      Future.delayed(Duration(seconds: 1), () {
-        smiTrigger!.value = true;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +13,14 @@ class _HomeViewState extends State<HomeView> {
           BackgroundVideoPlayer(videoUrl: "assets/videos/burger.mp4"),
           Center(
             child: Container(
-              alignment: Alignment.center,
+              padding: EdgeInsets.symmetric(horizontal: 20),
               height: 200,
               width: 350,
               decoration: BoxDecoration(
+                border: BoxBorder.all(
+                  color: const Color.fromARGB(193, 255, 255, 255),
+                  width: 3,
+                ),
                 borderRadius: BorderRadius.circular(16),
                 color: const Color.fromARGB(
                   255,
@@ -44,13 +29,23 @@ class _HomeViewState extends State<HomeView> {
                   221,
                 ).withValues(alpha: 0.4),
               ),
-              child: Text(
-                "Hamburger",
-                style: TextStyle(
-                  fontFamily: "Poppins",
-                  fontSize: 36,
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Hamburger",
+                    style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontSize: 36,
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                  ),
+                  Text(
+                    "ground beef, a hamburger bun,tomato, onion, and cheese",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
               ),
             ),
           ),
