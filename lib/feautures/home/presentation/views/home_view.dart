@@ -16,6 +16,9 @@ class _HomeViewState extends State<HomeView> {
     if (controller != null) {
       artboard.addController(controller);
       smiTrigger = controller.findInput<bool>('hover') as SMIBool?;
+      Future.delayed(Duration(seconds: 1), () {
+        smiTrigger!.value = true;
+      });
     }
   }
 
@@ -35,6 +38,17 @@ class _HomeViewState extends State<HomeView> {
             RiveAnimation.asset(
               "assets/animations/new_file.riv",
               onInit: _onRiveInit,
+            ),
+            Center(
+              child: Container(
+                height: 400,
+                width: 350,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.black.withValues(alpha: 0.4),
+                ),
+                child: Column(children: [Text("Title")]),
+              ),
             ),
           ],
         ),
