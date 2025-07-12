@@ -11,7 +11,7 @@ class WelcomeView extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          BackgroundVideoPlayer(),
+          BackgroundVideoPlayer(videoUrl: "assets/videos/home_video.mp4"),
           Container(
             margin: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.9,
