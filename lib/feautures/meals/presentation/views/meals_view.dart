@@ -39,6 +39,7 @@ class _MealsViewState extends State<MealsView> {
         children: [
           BackgroundVideoPlayer(
             videoUrl: meals[currentIndex].backgroundVideoUrl,
+            key: ValueKey(meals[currentIndex].backgroundVideoUrl),
           ),
           PageView.builder(
             onPageChanged: (index) {
