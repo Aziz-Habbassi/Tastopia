@@ -11,25 +11,47 @@ class MealsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final PageController pageController = PageController();
     return Scaffold(
       body: Stack(
         children: [
           const BackgroundVideoPlayer(videoUrl: "assets/videos/burger.mp4"),
           PageView.builder(
+            controller: pageController,
+            itemCount: 10,
             itemBuilder: (context, index) {
               return Stack(
                 children: [
+                  Positioned(
+                    top: 90,
+                    child: Text(
+                      "$index",
+                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    ),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       NavigationIcon(
                         icon: FontAwesomeIcons.circleArrowLeft,
-                        onpressed: () {},
+                        onpressed: () {
+                          pageController.animateToPage(
+                            index - 1,
+                            duration: Duration(milliseconds: 600),
+                            curve: Curves.easeInOutCubic,
+                          );
+                        },
                       ),
                       const MealsWidget(),
                       NavigationIcon(
                         icon: FontAwesomeIcons.circleArrowRight,
-                        onpressed: () {},
+                        onpressed: () {
+                          pageController.animateToPage(
+                            index + 1,
+                            duration: Duration(milliseconds: 600),
+                            curve: Curves.easeInOutCubic,
+                          );
+                        },
                       ),
                     ],
                   ),
