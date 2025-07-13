@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class MealsWidget extends StatelessWidget {
-  const MealsWidget({super.key});
+  const MealsWidget({
+    super.key,
+    required this.title,
+    required this.description,
+  });
+  final String title, description;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -26,7 +31,7 @@ class MealsWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Hamburger",
+              title,
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 36,
@@ -34,7 +39,7 @@ class MealsWidget extends StatelessWidget {
               ),
             ),
             Text(
-              "ground beef, a hamburger bun,tomato, onion, and cheese",
+              description,
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white),
             ),

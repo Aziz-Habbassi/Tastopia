@@ -31,6 +31,7 @@ class _BackgroundVideoPlayerState extends State<BackgroundVideoPlayer> {
 
   @override
   void dispose() {
+    debugPrint("dispose");
     _videoPlayerController.dispose();
     super.dispose();
   }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MealImage extends StatelessWidget {
-  const MealImage({super.key});
+  const MealImage({super.key, required this.imagUrl});
+  final String imagUrl;
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -21,11 +22,7 @@ class MealImage extends StatelessWidget {
               ),
             ],
           ),
-          child: Image.asset(
-            "assets/images/hamburger.png",
-            height: 200,
-            fit: BoxFit.cover,
-          ),
+          child: Image.asset(imagUrl, height: 200, fit: BoxFit.cover),
         ),
       ),
     );

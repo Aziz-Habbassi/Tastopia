@@ -1,34 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tastopia/core/models/meal_model/meal_model.dart';
 import 'package:tastopia/feautures/home/presentation/widgets/background_video_player.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/aligned_slidewidget.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meal_image.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meals_widget.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/navigation_icon.dart';
 
-class MealsView extends StatelessWidget {
+class MealsView extends StatefulWidget {
   const MealsView({super.key});
 
   @override
+  State<MealsView> createState() => _MealsViewState();
+}
+
+class _MealsViewState extends State<MealsView> {
+  int currentIndex = 0;
+  final List<MealModel> meals = [
+    MealModel(
+      imageUrl: "assets/images/hamburger.png",
+      title: "Hamburger",
+      description: "ground beef, a hamburger bun,tomato, onion, and cheese",
+      backgroundVideoUrl: "assets/videos/burger.mp4",
+    ),
+    MealModel(
+      imageUrl: "assets/images/sushi.png",
+      title: "Sushi",
+      description:
+          "apanese dish consisting of vinegared rice combined with various ingredients like seafood",
+      backgroundVideoUrl: "assets/videos/sushi.mp4",
+    ),
+  ];
+  final PageController pageController = PageController();
+  @override
   Widget build(BuildContext context) {
-    final PageController pageController = PageController();
     return Scaffold(
       body: Stack(
         children: [
-          const BackgroundVideoPlayer(videoUrl: "assets/videos/burger.mp4"),
+          BackgroundVideoPlayer(
+            videoUrl: meals[currentIndex].backgroundVideoUrl,
+          ),
           PageView.builder(
+            onPageChanged: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
             controller: pageController,
-            itemCount: 10,
+            itemCount: meals.length,
             itemBuilder: (context, index) {
               return Stack(
                 children: [
-                  Positioned(
-                    top: 90,
-                    child: Text(
-                      "$index",
-                      style: TextStyle(fontSize: 24, color: Colors.white),
-                    ),
-                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -42,7 +64,10 @@ class MealsView extends StatelessWidget {
                           );
                         },
                       ),
-                      const MealsWidget(),
+                      MealsWidget(
+                        title: meals[index].title,
+                        description: meals[index].description,
+                      ),
                       NavigationIcon(
                         icon: FontAwesomeIcons.circleArrowRight,
                         onpressed: () {
@@ -55,7 +80,7 @@ class MealsView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const MealImage(),
+                  MealImage(imagUrl: meals[index].imageUrl),
                   const AlignedSlidewidget(),
                 ],
               );
