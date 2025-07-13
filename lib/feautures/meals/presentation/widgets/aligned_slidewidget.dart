@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 
 class AlignedSlidewidget extends StatelessWidget {
@@ -27,12 +28,13 @@ class AlignedSlidewidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
         child: SlideAction(
+          sliderButtonIcon: Icon(FontAwesomeIcons.utensils),
           onSubmit: () {
             return null;
           },
           text: "Let's cook",
           innerColor: const Color.fromARGB(255, 255, 255, 255),
-          outerColor: const Color.fromARGB(255, 0, 0, 0).withAlpha(100),
+          outerColor: const Color.fromARGB(255, 0, 0, 0),
         ),
       ),
     );
