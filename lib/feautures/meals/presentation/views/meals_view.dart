@@ -35,11 +35,18 @@ class _MealsViewState extends State<MealsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body: Stack(
         children: [
-          BackgroundVideoPlayer(
-            videoUrl: meals[currentIndex].backgroundVideoUrl,
-            key: ValueKey(meals[currentIndex].backgroundVideoUrl),
+          AnimatedSwitcher(
+            duration: Duration(milliseconds: 600),
+            transitionBuilder: (Widget child, Animation<double> animation) {
+              return FadeTransition(opacity: animation, child: child);
+            },
+            child: BackgroundVideoPlayer(
+              videoUrl: meals[currentIndex].backgroundVideoUrl,
+              key: ValueKey(meals[currentIndex].backgroundVideoUrl),
+            ),
           ),
           PageView.builder(
             onPageChanged: (index) {
