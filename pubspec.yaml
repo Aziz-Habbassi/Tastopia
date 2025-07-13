@@ -38,6 +38,8 @@ dependencies:
   slide_to_act: ^2.0.2
   go_router: ^16.0.0
   rive: ^0.13.20
+  font_awesome_flutter: ^10.8.0
+  chewie: ^1.12.1
 
 dev_dependencies:
   flutter_test:

@@ -13,7 +13,7 @@ abstract class AppRoutes {
         },
       ),
       GoRoute(
-        path: '/Mealsview',
+        path: '/MealsView',
         builder: (BuildContext context, GoRouterState state) {
           return const MealsView();
         },

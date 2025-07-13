@@ -8,7 +8,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.go("/HomeView");
+        context.go("/MealsView");
       },
       child: Container(
         alignment: Alignment.center,

@@ -9,18 +9,24 @@ class BackgroundVideoPlayer extends StatefulWidget {
 }
 
 class _BackgroundVideoPlayerState extends State<BackgroundVideoPlayer> {
-  late VideoPlayerController _videoPlayerController;
+  late final VideoPlayerController _videoPlayerController;
   @override
   void initState() {
-    _videoPlayerController = VideoPlayerController.asset(widget.videoUrl);
+    super.initState();
+    _videoPlayerController = VideoPlayerController.asset(
+      widget.videoUrl,
+      videoPlayerOptions: VideoPlayerOptions(
+        mixWithOthers: true,
+        allowBackgroundPlayback: false,
+      ),
+    );
+    _videoPlayerController.setVolume(0);
+    _videoPlayerController.setLooping(true);
+    _videoPlayerController.setPlaybackSpeed(1.0);
     _videoPlayerController.initialize().then((_) {
-      _videoPlayerController.setVolume(0);
       _videoPlayerController.play();
-      _videoPlayerController.setLooping(true);
       setState(() {});
     });
-
-    super.initState();
   }
 
   @override
@@ -31,6 +37,15 @@ class _BackgroundVideoPlayerState extends State<BackgroundVideoPlayer> {
 
   @override
   Widget build(BuildContext context) {
-    return VideoPlayer(_videoPlayerController);
+    return SizedBox.expand(
+      child: FittedBox(
+        fit: BoxFit.cover,
+        child: SizedBox(
+          width: _videoPlayerController.value.size.width,
+          height: _videoPlayerController.value.size.height,
+          child: VideoPlayer(_videoPlayerController),
+        ),
+      ),
+    );
   }
 }
