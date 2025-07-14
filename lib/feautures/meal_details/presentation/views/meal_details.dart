@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
 
 class MealDetails extends StatelessWidget {
   const MealDetails({super.key});
@@ -53,6 +54,32 @@ class MealDetails extends StatelessWidget {
             "ground beef, a hamburger bun,tomato, onion, and cheese",
             textAlign: TextAlign.center,
             style: TextStyle(fontFamily: "Gt-Sectra", fontSize: 20),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Lottie.asset("assets/animations/timer.json", height: 48),
+                  Text("25 min"),
+                ],
+              ),
+              Column(
+                children: [
+                  Lottie.asset("assets/animations/fire.json", height: 48),
+                  Text("25 min"),
+                ],
+              ),
+              Column(
+                children: [
+                  Lottie.asset(
+                    "assets/animations/medium_cook.json",
+                    height: 48,
+                  ),
+                  Text("Medium "),
+                ],
+              ),
+            ],
           ),
         ],
       ),
