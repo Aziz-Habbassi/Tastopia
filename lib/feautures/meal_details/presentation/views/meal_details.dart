@@ -3,6 +3,7 @@ import 'package:tastopia/feautures/meal_details/presentation/widegts/infos_widge
 import 'package:tastopia/feautures/meal_details/presentation/widegts/ingredients_widget.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/meal_details_app_bar.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/meal_details_image.dart';
+import 'package:tastopia/feautures/meal_details/presentation/widegts/watch_tutorial_button.dart';
 
 class MealDetails extends StatelessWidget {
   const MealDetails({super.key});
@@ -40,6 +41,7 @@ class MealDetails extends StatelessWidget {
             ),
           ),
           const IngredientsWidget(),
+          const WatchTutorialButton(),
         ],
       ),
     );

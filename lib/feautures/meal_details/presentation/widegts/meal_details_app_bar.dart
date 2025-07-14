@@ -7,6 +7,7 @@ class MealDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      scrolledUnderElevation: 0,
       leading: IconButton(
         onPressed: () {
           context.go("/MealsView");
@@ -14,7 +15,7 @@ class MealDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: Icon(Icons.arrow_back),
       ),
       title: const Text(
-        "Let's Cook together",
+        "Let's Cook",
         style: TextStyle(fontFamily: "GT-Sectra", fontWeight: FontWeight.w600),
       ),
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),

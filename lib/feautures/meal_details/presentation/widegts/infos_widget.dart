@@ -18,7 +18,7 @@ class InfosWidget extends StatelessWidget {
         Column(
           children: [
             Lottie.asset("assets/animations/fire.json", height: 48),
-            Text("25 min"),
+            Text("450 kcal"),
           ],
         ),
         Column(
