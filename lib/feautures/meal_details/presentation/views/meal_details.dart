@@ -16,19 +16,23 @@ class MealDetails extends StatelessWidget {
       appBar: const MealDetailsAppBar(),
       body: ListView(
         children: [
-          const MealDetailsImage(),
+          MealDetailsImage(imageUrl: meal.imageUrl),
           Text(
             meal.title,
             textAlign: TextAlign.center,
             style: TextStyle(fontFamily: "Poppins", fontSize: 48),
           ),
-          const Text(
-            "ground beef, a hamburger bun,tomato, onion, and cheese",
+          Text(
+            meal.description,
             textAlign: TextAlign.center,
             style: TextStyle(fontFamily: "Gt-Sectra", fontSize: 20),
           ),
           const SizedBox(height: 24),
-          const InfosWidget(),
+          InfosWidget(
+            time: meal.time,
+            calories: meal.calories,
+            difficulty: meal.difficulty,
+          ),
           const SizedBox(height: 24),
           Center(
             child: Text(
@@ -41,8 +45,8 @@ class MealDetails extends StatelessWidget {
               ),
             ),
           ),
-          const IngredientsWidget(),
-          const WatchTutorialButton(),
+          IngredientsWidget(ingredients: meal.ingredients),
+          WatchTutorialButton(tutorialUrl: meal.tutoialUrl),
         ],
       ),
     );

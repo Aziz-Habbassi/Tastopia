@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MealDetailsImage extends StatelessWidget {
-  const MealDetailsImage({super.key});
-
+  const MealDetailsImage({super.key, required this.imageUrl});
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +20,7 @@ class MealDetailsImage extends StatelessWidget {
           ),
         ],
       ),
-      child: Image.asset("assets/images/hamburger.png"),
+      child: Image.asset(imageUrl),
     );
   }
 }

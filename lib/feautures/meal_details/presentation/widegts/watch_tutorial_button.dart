@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class WatchTutorialButton extends StatelessWidget {
-  const WatchTutorialButton({super.key});
-
+  const WatchTutorialButton({super.key, required this.tutorialUrl});
+  final String tutorialUrl;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        launchUrl(Uri.parse("https://www.youtube.com/watch?v=tuDbSVyClzI"));
+        launchUrl(Uri.parse(tutorialUrl));
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 50, vertical: 15),

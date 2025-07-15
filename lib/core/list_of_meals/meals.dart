@@ -9,7 +9,7 @@ abstract class Meals {
       backgroundVideoUrl: "assets/videos/burger.mp4",
       ingredients:
           '1 lb ground beef (80/20)\n1 tsp salt\n½ tsp black pepper\n¼ tsp garlic powder\n¼ tsp onion powder\n1 Tbsp Worcestershire sauce\n4 hamburger buns\n4 slices of cheese (optional)\nLettuce\nTomato\nRed onion\nPickles\nKetchup\nMustard\nMayonnaise',
-      diffeculty: 'Meduim',
+      difficulty: 'Meduim',
       tutoialUrl: "https://www.youtube.com/watch?v=tuDbSVyClzI",
       time: 25,
       calories: 450,
@@ -22,7 +22,7 @@ abstract class Meals {
       backgroundVideoUrl: "assets/videos/sushi.mp4",
       ingredients:
           '2 cups sushi rice\n2.5 cups water\n¼ cup rice vinegar\n2 Tbsp sugar\n1 tsp salt\n5 sheets nori\n200 g fresh sushi-grade salmon or tuna\n1 medium cucumber\n1 medium avocado\nSoy sauce (for serving)\nWasabi (for serving)\nPickled ginger (for serving)',
-      diffeculty: 'Medium',
+      difficulty: 'Medium',
       tutoialUrl: 'https://www.youtube.com/watch?v=joweUxpHaqc',
       time: 45,
       calories: 175,
@@ -35,7 +35,7 @@ abstract class Meals {
       backgroundVideoUrl: "assets/videos/caesar_salad.mp4",
       ingredients:
           "Romaine lettuce\nCroutons\nParmesan cheese\nAnchovy fillets\nGarlic\nEgg yolk(s)\nDijon mustard\nLemon juice\nOlive oil\nWorcestershire sauce\nSalt\nBlack pepper",
-      diffeculty: "Easy",
+      difficulty: "Easy",
       tutoialUrl: "https://www.youtube.com/watch?v=tkdr4jt1Qvs",
       time: 30,
       calories: 150,
@@ -48,7 +48,7 @@ abstract class Meals {
       backgroundVideoUrl: "assets/videos/stroopwafel.mp4",
       ingredients:
           "All-purpose flour\nButter\nGranulated sugar\nYeast\nMilk\nEgg\nSalt\nCinnamon\nBrown sugar\nHoney\nButter (for filling)\nVanilla extract (optional)",
-      diffeculty: "Medium",
+      difficulty: "Medium",
       tutoialUrl: "https://www.youtube.com/watch?v=A59TGw7N8i8",
       time: 45,
       calories: 150,

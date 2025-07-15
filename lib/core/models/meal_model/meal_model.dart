@@ -4,7 +4,7 @@ class MealModel {
       description,
       backgroundVideoUrl,
       ingredients,
-      diffeculty,
+      difficulty,
       tutoialUrl;
   final int time, calories;
 
@@ -14,7 +14,7 @@ class MealModel {
     required this.description,
     required this.backgroundVideoUrl,
     required this.ingredients,
-    required this.diffeculty,
+    required this.difficulty,
     required this.tutoialUrl,
     required this.time,
     required this.calories,
