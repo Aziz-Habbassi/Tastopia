@@ -9,7 +9,7 @@ abstract class Meals {
       backgroundVideoUrl: "assets/videos/burger.mp4",
       ingredients:
           '1 lb ground beef (80/20)\n1 tsp salt\n½ tsp black pepper\n¼ tsp garlic powder\n¼ tsp onion powder\n1 Tbsp Worcestershire sauce\n4 hamburger buns\n4 slices of cheese (optional)\nLettuce\nTomato\nRed onion\nPickles\nKetchup\nMustard\nMayonnaise',
-      difficulty: 'Meduim',
+      difficulty: 'Medium',
       tutoialUrl: "https://www.youtube.com/watch?v=tuDbSVyClzI",
       time: 25,
       calories: 450,

@@ -27,13 +27,21 @@ class InfosWidget extends StatelessWidget {
             Text("$calories kcal"),
           ],
         ),
-        Column(
-          children: [
-            Lottie.asset("assets/animations/medium_cook.json", height: 48),
-            Text(difficulty),
-          ],
-        ),
+        Column(children: [difficultyWidget(difficulty), Text(difficulty)]),
       ],
     );
+  }
+
+  Widget difficultyWidget(String difficulty) {
+    switch (difficulty) {
+      case "Easy":
+        return Lottie.asset("assets/animations/easy_cook.json", height: 48);
+      case "Medium":
+        return Lottie.asset("assets/animations/medium_cook.json", height: 48);
+      case "Hard":
+        return Lottie.asset("assets/animations/hard_cook.json", height: 48);
+      default:
+        return Lottie.asset("assets/animations/medium_cook.json", height: 48);
+    }
   }
 }
