@@ -16,7 +16,7 @@ class MealImage extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withAlpha(180),
-                offset: Offset(0, 30), // Push shadow downward
+                offset: Offset(0, 30),
                 blurRadius: 20,
                 spreadRadius: -26,
               ),

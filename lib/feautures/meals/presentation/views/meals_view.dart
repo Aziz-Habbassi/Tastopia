@@ -76,7 +76,7 @@ class _MealsViewState extends State<MealsView> {
                     ],
                   ),
                   MealImage(imagUrl: meals[index].imageUrl),
-                  const AlignedSlidewidget(),
+                  AlignedSlidewidget(mealModel: meals[index]),
                 ],
               );
             },

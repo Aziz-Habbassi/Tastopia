@@ -27,5 +27,31 @@ abstract class Meals {
       time: 45,
       calories: 175,
     ),
+    MealModel(
+      title: "Caesar Salad",
+      imageUrl: "assets/images/caesar_salad.png",
+      description:
+          "A classic Caesar salad blends crisp romaine, crunchy croutons, tangy‑savory dressing, and Parmesan in just minutes.",
+      backgroundVideoUrl: "assets/videos/caesar_salad.mp4",
+      ingredients:
+          "Romaine lettuce\nCroutons\nParmesan cheese\nAnchovy fillets\nGarlic\nEgg yolk(s)\nDijon mustard\nLemon juice\nOlive oil\nWorcestershire sauce\nSalt\nBlack pepper",
+      diffeculty: "Easy",
+      tutoialUrl: "https://www.youtube.com/watch?v=tkdr4jt1Qvs",
+      time: 30,
+      calories: 150,
+    ),
+    MealModel(
+      title: "Stroopwafel",
+      imageUrl: "assets/images/stroopwafel.png",
+      description:
+          "Thin waffle cookies sandwich a warm honey‑sugar caramel for a chewy, crisp Dutch treat.",
+      backgroundVideoUrl: "assets/videos/stroopwafel.mp4",
+      ingredients:
+          "All-purpose flour\nButter\nGranulated sugar\nYeast\nMilk\nEgg\nSalt\nCinnamon\nBrown sugar\nHoney\nButter (for filling)\nVanilla extract (optional)",
+      diffeculty: "Medium",
+      tutoialUrl: "https://www.youtube.com/watch?v=A59TGw7N8i8",
+      time: 45,
+      calories: 150,
+    ),
   ];
 }

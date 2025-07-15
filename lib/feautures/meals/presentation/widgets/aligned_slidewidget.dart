@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:slide_to_act/slide_to_act.dart';
+import 'package:tastopia/core/models/meal_model/meal_model.dart';
 
 class AlignedSlidewidget extends StatelessWidget {
-  const AlignedSlidewidget({super.key});
-
+  const AlignedSlidewidget({super.key, required this.mealModel});
+  final MealModel mealModel;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -34,7 +35,7 @@ class AlignedSlidewidget extends StatelessWidget {
             color: const Color.fromARGB(255, 0, 0, 0),
           ),
           onSubmit: () {
-            context.go('/MealsDetails');
+            context.go('/MealsDetails', extra: mealModel);
             return null;
           },
           text: "Let's cook",
