@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tastopia/core/models/meal_model/meal_model.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/infos_widget.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/ingredients_widget.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/meal_details_app_bar.dart';
@@ -6,8 +7,8 @@ import 'package:tastopia/feautures/meal_details/presentation/widegts/meal_detail
 import 'package:tastopia/feautures/meal_details/presentation/widegts/watch_tutorial_button.dart';
 
 class MealDetails extends StatelessWidget {
-  const MealDetails({super.key});
-
+  const MealDetails({super.key, required this.meal});
+  final MealModel meal;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,8 +17,8 @@ class MealDetails extends StatelessWidget {
       body: ListView(
         children: [
           const MealDetailsImage(),
-          const Text(
-            "Hamburger",
+          Text(
+            meal.title,
             textAlign: TextAlign.center,
             style: TextStyle(fontFamily: "Poppins", fontSize: 48),
           ),
