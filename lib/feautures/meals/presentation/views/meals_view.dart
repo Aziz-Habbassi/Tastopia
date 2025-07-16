@@ -11,7 +11,6 @@ import 'package:tastopia/feautures/meals/presentation/widgets/navigation_icon.da
 
 class MealsView extends StatefulWidget {
   const MealsView({super.key});
-
   @override
   State<MealsView> createState() => _MealsViewState();
 }
@@ -87,7 +86,7 @@ class _MealsViewState extends State<MealsView> {
               );
             },
           ),
-          const CustomNavigationBar(),
+          const CustomNavigationBar(selectedIndex: 1),
         ],
       ),
     );

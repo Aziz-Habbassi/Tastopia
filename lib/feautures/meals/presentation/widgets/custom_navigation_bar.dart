@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
-class CustomNavigationBar extends StatefulWidget {
-  const CustomNavigationBar({super.key});
+class CustomNavigationBar extends StatelessWidget {
+  const CustomNavigationBar({
+    super.key,
+    this.onpressedFavorites,
+    this.onpressedHome,
+    this.onpressedSearch,
+    required this.selectedIndex,
+  });
+  final VoidCallback? onpressedFavorites;
+  final VoidCallback? onpressedHome;
+  final VoidCallback? onpressedSearch;
+  final int selectedIndex;
 
-  @override
-  State<CustomNavigationBar> createState() => _CustomNavigationBarState();
-}
-
-class _CustomNavigationBarState extends State<CustomNavigationBar> {
-  int selectedIndex = 1;
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -22,7 +26,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             width: 3,
           ),
           borderRadius: BorderRadius.circular(50),
-          color: const Color.fromARGB(190, 255, 255, 255),
+          color: const Color.fromARGB(90, 255, 255, 255),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -32,10 +36,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                   ? Colors.amberAccent
                   : const Color.fromARGB(255, 0, 0, 0),
               highlightColor: const Color.fromARGB(100, 255, 251, 0),
-              onPressed: () {
-                selectedIndex = 0;
-                setState(() {});
-              },
+              onPressed: onpressedFavorites,
               icon: Icon(Icons.favorite, size: 36),
             ),
             IconButton(
@@ -43,10 +44,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                   ? const Color.fromARGB(255, 255, 200, 0)
                   : const Color.fromARGB(255, 0, 0, 0),
               highlightColor: const Color.fromARGB(100, 255, 251, 0),
-              onPressed: () {
-                selectedIndex = 1;
-                setState(() {});
-              },
+              onPressed: onpressedHome,
               icon: Icon(Icons.home, size: 42),
             ),
             IconButton(
@@ -54,10 +52,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                   ? Colors.amberAccent
                   : const Color.fromARGB(255, 0, 0, 0),
               highlightColor: const Color.fromARGB(69, 255, 251, 0),
-              onPressed: () {
-                selectedIndex = 2;
-                setState(() {});
-              },
+              onPressed: onpressedSearch,
               icon: Icon(Icons.search, size: 36),
             ),
           ],
