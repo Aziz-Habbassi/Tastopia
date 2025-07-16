@@ -9,14 +9,13 @@ class AlignedSlidewidget extends StatelessWidget {
   final MealModel mealModel;
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
     return Align(
       alignment: Alignment.center,
       child: Container(
-        margin: EdgeInsets.only(
-          right: 30,
-          left: 30,
-          top: MediaQuery.of(context).size.height * 0.6,
-        ),
+        width: width * 0.7,
+        margin: EdgeInsets.only(right: 30, left: 30, top: height * 0.4),
         height: 100,
         padding: EdgeInsets.symmetric(horizontal: 2),
         decoration: BoxDecoration(
