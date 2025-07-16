@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:tastopia/core/list_of_meals/meals.dart';
 import 'package:tastopia/core/models/meal_model/meal_model.dart';
 import 'package:tastopia/feautures/home/presentation/widgets/background_video_player.dart';
+import 'package:tastopia/feautures/meals/presentation/widgets/custom_navigation_bar.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meal_image.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meals_widget.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/navigation_icon.dart';
@@ -86,46 +87,7 @@ class _MealsViewState extends State<MealsView> {
               );
             },
           ),
-          Positioned(
-            bottom: MediaQuery.of(context).size.height * 0.1,
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.7,
-              height: MediaQuery.of(context).size.height * 0.1,
-              decoration: BoxDecoration(
-                border: BoxBorder.all(
-                  color: const Color.fromARGB(193, 255, 255, 255),
-                  width: 3,
-                ),
-                borderRadius: BorderRadius.circular(50),
-                color: const Color.fromARGB(190, 255, 255, 255),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.favorite,
-                      size: 36,
-                      color: const Color.fromARGB(255, 124, 124, 124),
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.add_circle, size: 42, color: Colors.black),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.search,
-                      size: 36,
-                      color: const Color.fromARGB(255, 124, 124, 124),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          const CustomNavigationBar(),
         ],
       ),
     );
