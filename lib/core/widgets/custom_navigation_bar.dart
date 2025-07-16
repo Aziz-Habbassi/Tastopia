@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class CustomNavigationBar extends StatelessWidget {
-  const CustomNavigationBar({
-    super.key,
-    this.onpressedFavorites,
-    this.onpressedHome,
-    this.onpressedSearch,
-    required this.selectedIndex,
-  });
-  final VoidCallback? onpressedFavorites;
-  final VoidCallback? onpressedHome;
-  final VoidCallback? onpressedSearch;
-  final int selectedIndex;
+class CustomNavigationBar extends StatefulWidget {
+  const CustomNavigationBar({super.key});
+
+  @override
+  State<CustomNavigationBar> createState() => _CustomNavigationBarState();
+}
+
+class _CustomNavigationBarState extends State<CustomNavigationBar> {
+  int selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +24,7 @@ class CustomNavigationBar extends StatelessWidget {
             width: 3,
           ),
           borderRadius: BorderRadius.circular(50),
-          color: const Color.fromARGB(90, 255, 255, 255),
+          color: const Color.fromARGB(100, 255, 255, 255),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -36,7 +34,12 @@ class CustomNavigationBar extends StatelessWidget {
                   ? Colors.amberAccent
                   : const Color.fromARGB(255, 0, 0, 0),
               highlightColor: const Color.fromARGB(100, 255, 251, 0),
-              onPressed: onpressedFavorites,
+              onPressed: () {
+                context.go("/MealsView");
+                setState(() {
+                  selectedIndex = 0;
+                });
+              },
               icon: Icon(Icons.favorite, size: 36),
             ),
             IconButton(
@@ -44,7 +47,12 @@ class CustomNavigationBar extends StatelessWidget {
                   ? const Color.fromARGB(255, 255, 200, 0)
                   : const Color.fromARGB(255, 0, 0, 0),
               highlightColor: const Color.fromARGB(100, 255, 251, 0),
-              onPressed: onpressedHome,
+              onPressed: () {
+                context.go("/MealsView");
+                setState(() {
+                  selectedIndex = 1;
+                });
+              },
               icon: Icon(Icons.home, size: 42),
             ),
             IconButton(
@@ -52,7 +60,12 @@ class CustomNavigationBar extends StatelessWidget {
                   ? Colors.amberAccent
                   : const Color.fromARGB(255, 0, 0, 0),
               highlightColor: const Color.fromARGB(69, 255, 251, 0),
-              onPressed: onpressedSearch,
+              onPressed: () {
+                context.go("/SearchView");
+                setState(() {
+                  selectedIndex = 2;
+                });
+              },
               icon: Icon(Icons.search, size: 36),
             ),
           ],
