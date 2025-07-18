@@ -19,13 +19,23 @@ class MealsGirdList extends StatelessWidget {
               mainAxisSpacing: 30,
               crossAxisCount: 2,
             ),
-            itemCount: Meals.meals.length,
+            itemCount: meals.length,
             itemBuilder: (context, index) {
               return ItemWidget(mealModel: meals[index]);
             },
           );
         } else {
-          return Text("Error !");
+          final List<MealModel> meals = Meals.meals;
+          return SliverGrid.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              mainAxisSpacing: 30,
+              crossAxisCount: 2,
+            ),
+            itemCount: Meals.meals.length,
+            itemBuilder: (context, index) {
+              return ItemWidget(mealModel: meals[index]);
+            },
+          );
         }
       },
     );
