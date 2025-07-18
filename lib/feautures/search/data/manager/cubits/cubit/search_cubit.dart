@@ -5,4 +5,7 @@ part 'search_state.dart';
 
 class SearchCubit extends Cubit<SearchState> {
   SearchCubit() : super(SearchInitial());
+  void search(List<String> list) {
+    emit(SearchDone(searchResult: list));
+  }
 }
