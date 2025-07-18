@@ -32,8 +32,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             IconButton(
               color: selectedIndex == 0
                   ? Colors.amberAccent
-                  : const Color.fromARGB(255, 0, 0, 0),
-              highlightColor: const Color.fromARGB(100, 255, 251, 0),
+                  : const Color.fromARGB(255, 255, 255, 255),
+              highlightColor: const Color.fromARGB(62, 255, 253, 131),
               onPressed: () {
                 context.go("/MealsView");
                 setState(() {
@@ -45,8 +45,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             IconButton(
               color: selectedIndex == 1
                   ? const Color.fromARGB(255, 255, 200, 0)
-                  : const Color.fromARGB(255, 0, 0, 0),
-              highlightColor: const Color.fromARGB(100, 255, 251, 0),
+                  : const Color.fromARGB(255, 255, 255, 255),
+              highlightColor: const Color.fromARGB(62, 255, 253, 131),
               onPressed: () {
                 context.go("/MealsView");
                 setState(() {
@@ -58,8 +58,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             IconButton(
               color: selectedIndex == 2
                   ? Colors.amberAccent
-                  : const Color.fromARGB(255, 0, 0, 0),
-              highlightColor: const Color.fromARGB(69, 255, 251, 0),
+                  : const Color.fromARGB(255, 255, 255, 255),
+              highlightColor: const Color.fromARGB(62, 255, 253, 131),
               onPressed: () {
                 context.go("/SearchView");
                 setState(() {
