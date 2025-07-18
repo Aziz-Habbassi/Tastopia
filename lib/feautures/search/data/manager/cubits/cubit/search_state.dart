@@ -6,7 +6,7 @@ sealed class SearchState {}
 final class SearchInitial extends SearchState {}
 
 final class SearchDone extends SearchState {
-  final List<String> searchResult;
+  final List<MealModel> searchResult;
 
   SearchDone({required this.searchResult});
 }
