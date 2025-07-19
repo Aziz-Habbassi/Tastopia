@@ -53,5 +53,44 @@ abstract class Meals {
       time: 45,
       calories: 150,
     ),
+    MealModel(
+      title: "Ramen",
+      imageUrl: "assets/images/ramen.png",
+      description:
+          "A savory noodle soup with rich broth, ramen noodles, and various toppings like pork, egg, and vegetables.",
+      backgroundVideoUrl: "assets/videos/ramen.mp4",
+      ingredients:
+          "Pork bones or chicken \n Water \n Soy sauce \n Miso \n Garlic \n Ginger \n Scallions \n Ramen noodles \n Chashu pork \n Soft-boiled eggs \n Bamboo shoots \n Nori \n Green onions \n Corn \n Sesame seeds",
+      difficulty: "Medium",
+      tutoialUrl: "https://www.youtube.com/watch?v=TGHbePXG7Oo",
+      time: 60,
+      calories: 500,
+    ),
+    MealModel(
+      title: "Tacos",
+      imageUrl: "assets/images/tacos.png",
+      description:
+          "Grilled or sautéed chicken, served in soft tortillas with fresh toppings like salsa, cilantro, and lime.",
+      backgroundVideoUrl: "assets/videos/tacos.mp4",
+      ingredients:
+          "Chicken breast or thighs \n Olive oil \n Lime \n Garlic \n Cumin \n Chili powder \n Paprika \n Salt \n Pepper \n Tortillas \n Salsa \n Cilantro \n Onion \n Lime wedges \n Avocado (optional) \n Sour cream (optional)",
+      difficulty: "Easy",
+      tutoialUrl: "https://www.youtube.com/watch?v=kvOsKDEbBQw",
+      time: 40,
+      calories: 250,
+    ),
+    MealModel(
+      title: "Tiramisu",
+      imageUrl: "assets/images/tiramisu.png",
+      description:
+          "An Italian layered dessert with coffee-soaked ladyfingers, mascarpone cream, and cocoa powder.",
+      backgroundVideoUrl: "assets/videos/tiramisu.mp4",
+      ingredients:
+          "Mascarpone cheese \n Heavy cream \n Eggs \n Sugar \n Vanilla extract \n Ladyfingers \n Espresso \n Cocoa powder \n Dark chocolate (optional)",
+      difficulty: "Easy",
+      tutoialUrl: "https://www.youtube.com/watch?v=7VTtenyKRg4",
+      time: 40,
+      calories: 400,
+    ),
   ];
 }
