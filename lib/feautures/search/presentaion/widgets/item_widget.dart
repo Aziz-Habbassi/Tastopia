@@ -59,6 +59,24 @@ class ItemWidget extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
+              const SizedBox(height: 5),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Icon(Icons.local_fire_department),
+                      Text(mealModel.calories.toString()),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Icon(Icons.alarm),
+                      Text("${mealModel.time} min"),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ],
