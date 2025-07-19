@@ -1,4 +1,4 @@
-import 'package:tastopia/core/models/meal_model/meal_model.dart';
+import 'package:tastopia/core/models/meal/meal_model.dart';
 
 abstract class Meals {
   static final List<MealModel> meals = [
@@ -10,7 +10,7 @@ abstract class Meals {
       ingredients:
           '1 lb ground beef (80/20)\n1 tsp salt\n½ tsp black pepper\n¼ tsp garlic powder\n¼ tsp onion powder\n1 Tbsp Worcestershire sauce\n4 hamburger buns\n4 slices of cheese (optional)\nLettuce\nTomato\nRed onion\nPickles\nKetchup\nMustard\nMayonnaise',
       difficulty: 'Medium',
-      tutoialUrl: "https://www.youtube.com/watch?v=tuDbSVyClzI",
+      tutorialUrl: "https://www.youtube.com/watch?v=tuDbSVyClzI",
       time: 25,
       calories: 450,
     ),
@@ -23,7 +23,7 @@ abstract class Meals {
       ingredients:
           '2 cups sushi rice\n2.5 cups water\n¼ cup rice vinegar\n2 Tbsp sugar\n1 tsp salt\n5 sheets nori\n200 g fresh sushi-grade salmon or tuna\n1 medium cucumber\n1 medium avocado\nSoy sauce (for serving)\nWasabi (for serving)\nPickled ginger (for serving)',
       difficulty: 'Medium',
-      tutoialUrl: 'https://www.youtube.com/watch?v=joweUxpHaqc',
+      tutorialUrl: 'https://www.youtube.com/watch?v=joweUxpHaqc',
       time: 45,
       calories: 175,
     ),
@@ -36,7 +36,7 @@ abstract class Meals {
       ingredients:
           "Romaine lettuce\nCroutons\nParmesan cheese\nAnchovy fillets\nGarlic\nEgg yolk(s)\nDijon mustard\nLemon juice\nOlive oil\nWorcestershire sauce\nSalt\nBlack pepper",
       difficulty: "Easy",
-      tutoialUrl: "https://www.youtube.com/watch?v=tkdr4jt1Qvs",
+      tutorialUrl: "https://www.youtube.com/watch?v=tkdr4jt1Qvs",
       time: 30,
       calories: 150,
     ),
@@ -49,7 +49,7 @@ abstract class Meals {
       ingredients:
           "All-purpose flour\nButter\nGranulated sugar\nYeast\nMilk\nEgg\nSalt\nCinnamon\nBrown sugar\nHoney\nButter (for filling)\nVanilla extract (optional)",
       difficulty: "Medium",
-      tutoialUrl: "https://www.youtube.com/watch?v=A59TGw7N8i8",
+      tutorialUrl: "https://www.youtube.com/watch?v=A59TGw7N8i8",
       time: 45,
       calories: 150,
     ),
@@ -62,7 +62,7 @@ abstract class Meals {
       ingredients:
           "Pork bones or chicken \n Water \n Soy sauce \n Miso \n Garlic \n Ginger \n Scallions \n Ramen noodles \n Chashu pork \n Soft-boiled eggs \n Bamboo shoots \n Nori \n Green onions \n Corn \n Sesame seeds",
       difficulty: "Medium",
-      tutoialUrl: "https://www.youtube.com/watch?v=TGHbePXG7Oo",
+      tutorialUrl: "https://www.youtube.com/watch?v=TGHbePXG7Oo",
       time: 60,
       calories: 500,
     ),
@@ -75,7 +75,7 @@ abstract class Meals {
       ingredients:
           "Chicken breast or thighs \n Olive oil \n Lime \n Garlic \n Cumin \n Chili powder \n Paprika \n Salt \n Pepper \n Tortillas \n Salsa \n Cilantro \n Onion \n Lime wedges \n Avocado (optional) \n Sour cream (optional)",
       difficulty: "Easy",
-      tutoialUrl: "https://www.youtube.com/watch?v=kvOsKDEbBQw",
+      tutorialUrl: "https://www.youtube.com/watch?v=kvOsKDEbBQw",
       time: 40,
       calories: 250,
     ),
@@ -88,7 +88,7 @@ abstract class Meals {
       ingredients:
           "Mascarpone cheese \n Heavy cream \n Eggs \n Sugar \n Vanilla extract \n Ladyfingers \n Espresso \n Cocoa powder \n Dark chocolate (optional)",
       difficulty: "Easy",
-      tutoialUrl: "https://www.youtube.com/watch?v=7VTtenyKRg4",
+      tutorialUrl: "https://www.youtube.com/watch?v=7VTtenyKRg4",
       time: 40,
       calories: 400,
     ),

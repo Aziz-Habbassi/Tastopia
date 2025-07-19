@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tastopia/core/models/meal_model/meal_model.dart';
+import 'package:tastopia/core/models/meal/meal_model.dart';
 
 class ItemWidget extends StatelessWidget {
   const ItemWidget({super.key, required this.mealModel});

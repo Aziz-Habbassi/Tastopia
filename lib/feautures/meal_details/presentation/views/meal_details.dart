@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tastopia/core/models/meal_model/meal_model.dart';
+import 'package:tastopia/core/models/meal/meal_model.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/infos_widget.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/ingredients_widget.dart';
 import 'package:tastopia/feautures/meal_details/presentation/widegts/meal_details_app_bar.dart';
@@ -46,7 +46,7 @@ class MealDetails extends StatelessWidget {
             ),
           ),
           IngredientsWidget(ingredients: meal.ingredients),
-          WatchTutorialButton(tutorialUrl: meal.tutoialUrl),
+          WatchTutorialButton(tutorialUrl: meal.tutorialUrl),
         ],
       ),
     );

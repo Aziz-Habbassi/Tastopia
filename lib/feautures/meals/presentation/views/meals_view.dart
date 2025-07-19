@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tastopia/core/list_of_meals/meals.dart';
-import 'package:tastopia/core/models/meal_model/meal_model.dart';
+import 'package:tastopia/core/models/meal/meal_model.dart';
 import 'package:tastopia/feautures/splash/presentation/widgets/background_video_player.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meal_image.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meals_widget.dart';
