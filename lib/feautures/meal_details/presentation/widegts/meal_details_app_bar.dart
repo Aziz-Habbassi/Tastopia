@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:tastopia/core/models/meal/meal_model.dart';
 
 class MealDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MealDetailsAppBar({super.key});
-
+  const MealDetailsAppBar({super.key, required this.mealModel, this.onsaved});
+  final MealModel mealModel;
+  final void Function()? onsaved;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -20,6 +22,16 @@ class MealDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       centerTitle: true,
+      actions: [
+        IconButton(
+          onPressed: onsaved,
+          icon: Icon(
+            Icons.bookmark,
+            size: 26,
+            color: mealModel.isSaved ? Colors.amberAccent : Colors.grey,
+          ),
+        ),
+      ],
     );
   }
 
