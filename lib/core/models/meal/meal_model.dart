@@ -22,7 +22,8 @@ class MealModel extends HiveObject {
   final int time;
   @HiveField(8)
   final int calories;
-
+  @HiveField(9)
+  bool isSaved;
   MealModel({
     required this.title,
     required this.imageUrl,
@@ -33,5 +34,6 @@ class MealModel extends HiveObject {
     required this.tutorialUrl,
     required this.time,
     required this.calories,
+    required this.isSaved,
   });
 }

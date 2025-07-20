@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tastopia/core/list_of_meals/meals.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:tastopia/core/models/meal/meal_model.dart';
+import 'package:tastopia/core/services/service_locator.dart';
 import 'package:tastopia/feautures/splash/presentation/widgets/background_video_player.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meal_image.dart';
 import 'package:tastopia/feautures/meals/presentation/widgets/meals_widget.dart';
@@ -16,7 +17,7 @@ class MealsView extends StatefulWidget {
 
 class _MealsViewState extends State<MealsView> {
   int currentIndex = 0;
-  final List<MealModel> meals = Meals.meals;
+  final List<MealModel> meals = getIt.get<Box<MealModel>>().values.toList();
   final PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
@@ -49,6 +50,7 @@ class _MealsViewState extends State<MealsView> {
                   context.go('/MealsDetails', extra: meals[index]);
                 },
                 child: Stack(
+                  alignment: Alignment.center,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -66,6 +68,15 @@ class _MealsViewState extends State<MealsView> {
                         MealsWidget(
                           title: meals[index].title,
                           description: meals[index].description,
+                          isSaved: meals[index].isSaved,
+                          onsave: () {
+                            meals[index].isSaved = !meals[index].isSaved;
+                            getIt.get<Box<MealModel>>().putAt(
+                              index,
+                              meals[index],
+                            );
+                            setState(() {});
+                          },
                         ),
                         NavigationIcon(
                           icon: FontAwesomeIcons.circleArrowRight,

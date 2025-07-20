@@ -13,6 +13,7 @@ abstract class Meals {
       tutorialUrl: "https://www.youtube.com/watch?v=tuDbSVyClzI",
       time: 25,
       calories: 450,
+      isSaved: false,
     ),
     MealModel(
       imageUrl: "assets/images/sushi.png",
@@ -26,6 +27,7 @@ abstract class Meals {
       tutorialUrl: 'https://www.youtube.com/watch?v=joweUxpHaqc',
       time: 45,
       calories: 175,
+      isSaved: false,
     ),
     MealModel(
       title: "Caesar Salad",
@@ -39,6 +41,7 @@ abstract class Meals {
       tutorialUrl: "https://www.youtube.com/watch?v=tkdr4jt1Qvs",
       time: 30,
       calories: 150,
+      isSaved: false,
     ),
     MealModel(
       title: "Stroopwafel",
@@ -52,6 +55,7 @@ abstract class Meals {
       tutorialUrl: "https://www.youtube.com/watch?v=A59TGw7N8i8",
       time: 45,
       calories: 150,
+      isSaved: false,
     ),
     MealModel(
       title: "Ramen",
@@ -65,6 +69,7 @@ abstract class Meals {
       tutorialUrl: "https://www.youtube.com/watch?v=TGHbePXG7Oo",
       time: 60,
       calories: 500,
+      isSaved: false,
     ),
     MealModel(
       title: "Tacos",
@@ -78,6 +83,7 @@ abstract class Meals {
       tutorialUrl: "https://www.youtube.com/watch?v=kvOsKDEbBQw",
       time: 40,
       calories: 250,
+      isSaved: false,
     ),
     MealModel(
       title: "Tiramisu",
@@ -91,6 +97,7 @@ abstract class Meals {
       tutorialUrl: "https://www.youtube.com/watch?v=7VTtenyKRg4",
       time: 40,
       calories: 400,
+      isSaved: false,
     ),
   ];
 }
