@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:tastopia/core/models/meal/meal_model.dart';
-import 'package:tastopia/feautures/search/data/manager/cubits/cubit/search_cubit.dart';
+import 'package:tastopia/core/services/service_locator.dart';
+import 'package:tastopia/feautures/search/data/manager/cubits/search_cubit/search_cubit.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({super.key});
@@ -30,9 +31,7 @@ class SearchTextField extends StatelessWidget {
   }
 
   void search(String name, BuildContext context) {
-    final List<MealModel> meals = Hive.box<MealModel>(
-      "mealsBox",
-    ).values.toList();
+    final List<MealModel> meals = getIt.get<Box<MealModel>>().values.toList();
     if (name.isNotEmpty) {
       final List<MealModel> result = meals
           .where(

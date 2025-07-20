@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tastopia/feautures/search/data/manager/cubits/cubit/search_cubit.dart';
+import 'package:tastopia/feautures/search/data/manager/cubits/search_cubit/search_cubit.dart';
 import 'package:tastopia/feautures/search/presentaion/widgets/meals_gird_list.dart';
 import 'package:tastopia/feautures/search/presentaion/widgets/search_text_field.dart';
 import 'package:tastopia/feautures/search/presentaion/widgets/search_view_app_bar.dart';

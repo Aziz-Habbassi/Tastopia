@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:tastopia/core/list_of_meals/meals.dart';
 import 'package:tastopia/core/models/meal/meal_model.dart';
-import 'package:tastopia/feautures/search/data/manager/cubits/cubit/search_cubit.dart';
+import 'package:tastopia/core/services/service_locator.dart';
+import 'package:tastopia/feautures/search/data/manager/cubits/search_cubit/search_cubit.dart';
 import 'package:tastopia/feautures/search/presentaion/widgets/item_widget.dart';
 
 class MealsGirdList extends StatelessWidget {
@@ -26,9 +27,10 @@ class MealsGirdList extends StatelessWidget {
             },
           );
         } else {
-          final List<MealModel> meals = Hive.box<MealModel>(
-            "mealsBox",
-          ).values.toList();
+          final List<MealModel> meals = getIt
+              .get<Box<MealModel>>()
+              .values
+              .toList();
           return SliverGrid.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               mainAxisSpacing: 30,
