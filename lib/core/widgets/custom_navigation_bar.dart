@@ -35,11 +35,12 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                   : const Color.fromARGB(255, 255, 255, 255),
               highlightColor: const Color.fromARGB(62, 255, 253, 131),
               onPressed: () {
+                context.go("/SavedMealsView");
                 setState(() {
                   selectedIndex = 0;
                 });
               },
-              icon: Icon(Icons.favorite, size: 36),
+              icon: Icon(Icons.bookmark_sharp, size: 36),
             ),
             IconButton(
               color: selectedIndex == 1
