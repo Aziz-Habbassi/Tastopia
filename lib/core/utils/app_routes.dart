@@ -4,6 +4,7 @@ import 'package:tastopia/core/models/meal/meal_model.dart';
 import 'package:tastopia/feautures/home/presentation/views/home_view.dart';
 import 'package:tastopia/feautures/meal_details/presentation/views/meal_details.dart';
 import 'package:tastopia/feautures/meals/presentation/views/meals_view.dart';
+import 'package:tastopia/feautures/saved/presentation/views/saved_meals_view.dart';
 import 'package:tastopia/feautures/splash/presentation/views/splash_screen.dart';
 import 'package:tastopia/feautures/search/presentaion/views/search_view.dart';
 
@@ -25,11 +26,16 @@ abstract class AppRoutes {
               return const NoTransitionPage(child: MealsView());
             },
           ),
-
           GoRoute(
             path: '/SearchView',
             pageBuilder: (BuildContext context, GoRouterState state) {
               return const NoTransitionPage(child: SearchView());
+            },
+          ),
+          GoRoute(
+            path: '/SavedMealsView',
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              return const NoTransitionPage(child: SavedMealsView());
             },
           ),
         ],
