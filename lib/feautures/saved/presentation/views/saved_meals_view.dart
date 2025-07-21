@@ -14,6 +14,7 @@ class SavedMealsView extends StatelessWidget {
       body: BlocProvider(
         create: (context) => SearchCubit(),
         child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
           slivers: [
             const SliverToBoxAdapter(child: SavedMealsAppBar()),
             const SliverToBoxAdapter(child: SearchTextField()),

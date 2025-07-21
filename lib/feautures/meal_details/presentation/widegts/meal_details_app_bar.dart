@@ -27,7 +27,7 @@ class MealDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
           onPressed: onsaved,
           icon: Icon(
             Icons.bookmark,
-            size: 26,
+            size: 48,
             color: mealModel.isSaved ? Colors.amberAccent : Colors.grey,
           ),
         ),

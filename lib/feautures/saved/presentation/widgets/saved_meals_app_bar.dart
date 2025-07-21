@@ -13,7 +13,7 @@ class SavedMealsAppBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Saved",
+                "Favorite",
                 style: TextStyle(fontFamily: "Gt-Sectra", fontSize: 36),
               ),
               Text(

@@ -16,7 +16,7 @@ class MealsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10),
-      height: 240,
+      height: 230,
       width: 300,
       decoration: BoxDecoration(
         border: BoxBorder.all(
@@ -43,18 +43,19 @@ class MealsWidget extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              IconButton(
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: IconButton(
+                padding: const EdgeInsets.only(bottom: 50, top: 5),
                 onPressed: onsave,
                 icon: Icon(
-                  Icons.bookmark,
-                  size: 26,
+                  Icons.favorite,
+                  size: 42,
                   color: isSaved ? Colors.amberAccent : Colors.grey,
                 ),
               ),
-            ],
+            ),
           ),
         ],
       ),

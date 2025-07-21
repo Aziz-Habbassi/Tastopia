@@ -30,25 +30,43 @@ class ItemWidget extends StatelessWidget {
               ).withValues(alpha: 0.4),
             ),
           ),
+          mealModel.isSaved
+              ? const Align(
+                  alignment: Alignment.topRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 15, right: 20),
+                    child: Icon(
+                      Icons.favorite_border,
+                      size: 32,
+                      color: Color.fromARGB(242, 255, 191, 1),
+                    ),
+                  ),
+                )
+              : const SizedBox(),
           Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withAlpha(180),
-                      offset: Offset(0, 30),
-                      blurRadius: 20,
-                      spreadRadius: -26,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withAlpha(180),
+                          offset: Offset(0, 30),
+                          blurRadius: 20,
+                          spreadRadius: -26,
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                child: Image.asset(
-                  mealModel.imageUrl,
-                  height: 120,
-                  fit: BoxFit.cover,
-                ),
+                    child: Image.asset(
+                      mealModel.imageUrl,
+                      height: 120,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 10),
               Text(
