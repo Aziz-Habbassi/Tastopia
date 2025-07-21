@@ -27,7 +27,7 @@ class SavedMealsAppBar extends StatelessWidget {
             ],
           ),
           Spacer(),
-          Icon(Icons.bookmark, size: 150, color: Colors.amber),
+          Icon(Icons.bookmark_border, size: 150, color: Colors.amber),
         ],
       ),
     );
