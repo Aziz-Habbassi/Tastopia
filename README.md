@@ -92,7 +92,7 @@ Before running this project, make sure you have:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Aziz-Habbassi/Tastopia.git
-   cd recipe-master-app
+   cd Tastopia
    ```
 
 2. **Install dependencies**
